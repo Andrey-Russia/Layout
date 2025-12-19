@@ -179,10 +179,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f12bebad2120986409f1c52bcfe17bb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _prefab: {fileID: 6245401599635962459, guid: f57d60ac44063d942ac8556f6ac9bae8, type: 3}
-  _spawnPosition: {fileID: 1048692428}
-  _levelsCount: 20
-  _levelLock: 17
+  Prefab: {fileID: 6245401599635962459, guid: f57d60ac44063d942ac8556f6ac9bae8, type: 3}
+  SpawnPosition: {fileID: 1048692428}
+  LevelsCount: 34
+  LevelLock: 30
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
