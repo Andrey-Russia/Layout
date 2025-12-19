@@ -2,32 +2,23 @@ using UnityEngine;
 
 public class LevelSpavner : MonoBehaviour
 {
-    [SerializeField] private Level _prefab;
-    [SerializeField] private Transform _spawnPosition;
-    [SerializeField] private int _levelsCount = 20;
-    [SerializeField] private int _levelLock = 16;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public Level Prefab;
+    public Transform SpawnPosition;
+    public int LevelsCount = 20;
+    public int LevelLock = 16;
     void Start()
     {
-        for (int i = 1; i <= _levelsCount; i++)
+        for (int i = 1; i <= LevelsCount; i++)
         {
             int rnd = Random.Range(0, 3);
             bool isLocked = false;
 
-            //isLocked = i >= _levelLock;
-
-            if(i >= _levelLock)
+            if(i >= LevelLock)
             {
                 isLocked = true;
             }
 
-            Instantiate(_prefab, _spawnPosition).Init(i,rnd,isLocked);
+            Instantiate(Prefab, SpawnPosition).Init(i,rnd,isLocked);
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
